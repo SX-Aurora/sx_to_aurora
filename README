@@ -1,0 +1,8 @@
+convert compiler directoves from SX-ACE sxf90/sxf03/sxc++/sxcc to SX Aurora TSUBASA directives
+for nfort/ncc/nc++.
+
+usage:
+	sx_to_aurora.py <sourcefile> [...]
+
+sourcefile will be backed to <sourcefile>.sxbkup, directives will be added.
+Old directives remain in place, calling it several times will add new directives several times.
