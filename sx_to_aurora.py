@@ -115,15 +115,17 @@ for f in sys.argv[1:]:
                 elif '=' in i:
                     m = re.match('(\S+)=(\d+)',i)
                     try:
-                        print  >>new,prefix,
-                        print  >>new,"%s(%s)" % (dirs[m.group(1)],m.group(2))
+                        if dirs[m.group(1)]!="":
+                            print  >>new,prefix,
+                            print  >>new,"%s(%s)" % (dirs[m.group(1)],m.group(2))
                     except KeyError:
                         pass
                 elif '(' in i:
                     m = re.match('(\S+)\((\S+)\)',i)
                     try:
-                        print  >>new,prefix,
-                        print  >>new,"%s(%s)" % (dirs[m.group(1)],m.group(2))
+                        if dirs[m.group(1)]!="":
+                            print  >>new,prefix,
+                            print  >>new,"%s(%s)" % (dirs[m.group(1)],m.group(2))
                     except KeyError:
                         pass
     new.close()
